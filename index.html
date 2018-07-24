@@ -6,10 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/plyr.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 	<script src="assets/js/popper.min.js"></script>
 	<script src="assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/plyr.js"></script>
+	<script type="text/javascript" src="assets/js/te.js"></script>
+
 </head>
 <body>
 	<div class="container-fluid p-0">
@@ -95,13 +99,33 @@
 				
 				<div class="container">
 					<div class="row">
+						<!-- Painel esquerdo-->
 						<div class="col-md-6 col-sm-12">
+
 							<h2>Bem vindo ao CEP Brazópolis</h2>
 							<p class="text-justify">Este é o site do CEP Brazópolis, um site feito para que todos possam conhecer nossos cursos, história e equipe gestora. Todas as informações aqui divulgadas estão sujeitas a alterações Lembramos que estamos sempre a disposição para esclarecer quaisquer dúvidas. Estejam sempre em contato com os coordenadores de cursos, especialistas e a direção. É muito importante para nós que todos interajam e conheçam a realidade de nossa escola.</p>
-							<p class="text-center">#VEMPROCEPBRAZOPOLIS.</p>
+							<p class="text-center text-primary">#VEMPROCEPBRAZOPOLIS.</p>
+							
+							<!--inicio do video-->
+							<div class="row no-gutters">
+								<div class="col-12">
+									<h5>Assista o vídeo que nossos alunos do Ensino Integrado preparam apresentando nossa escola.</h5>
+									<video controls="controls" class="w-100" id="player" poster="assets/imagens/poster.jpg" preload="auto">
+									<source src="http://www.cepbrazopolis.com.br/videos/cep.mp4" type="video/mp4">
+									</video>
+								</div>
+							</div>
+							<script > 
+								var player = new Plyr('video', { captions: { active: true } });
+								window.player = player;
+							</script>
+							<!-- Fim do video -->
 						</div>
-						<div class="col-md-6 col-sm-12 d-none d-md-block text-center">
+						<!-- fim painel -->
+						
 
+						<!-- Painel direito de cursos-->
+						<div class="col-md-6 col-sm-12 d-none d-md-block text-center mt-5">
 							<div id="cartao3d_im" class="hover d-inline-block mx-auto my-auto">
 							    <div id="cartao3d_tx" class="shadow">
 							        <div class="front cartao3d">
@@ -109,7 +133,7 @@
 							        </div>
 							        <div class="back cartao3d center">
 							        	<h3 class="destaque">
-							        		Informatica
+							        		Administração
 							        	</h3>
 							            <p>Digite o texto que aparece no fundo...</p>
 							        </div>
@@ -123,7 +147,7 @@
 							        </div>
 							        <div class="back cartao3d center">
 							        	<h3 class="destaque">
-							        		Informatica
+							        		Eletrônica
 							        	</h3>
 							            <p>Digite o texto que aparece no fundo...</p>
 							        </div>
@@ -137,7 +161,7 @@
 							        </div>
 							        <div class="back cartao3d center">
 							        	<h3 class="destaque">
-							        		Informatica
+							        		Informática para Internet
 							        	</h3>
 							            <p>Digite o texto que aparece no fundo...</p>
 							        </div>
@@ -151,16 +175,62 @@
 							        </div>
 							        <div class="back cartao3d center">
 							        	<h3 class="destaque">
-							        		Informatica
+							        		Logística
 							        	</h3>
 							            <p>Digite o texto que aparece no fundo...</p>
 							        </div>
 							    </div>
 							</div>
+							<div class="row">
+								<div class="col-md-10 mx-auto">
+									<a class="btn btn-primary text-white my-4 rounded-0 btn-block ">
+										<i class="fas fa-comment-alt"></i> Entre em Contato
+									</a>
+								</div>
+							</div>
+						<!-- Fim do painel de cursos -->
 
-											
 						</div>
+						
 					</div>
+					<div class="row my-4">
+						
+						<div class="col-md-6 my-2  h-100">
+							<img class="w-100 d-none d-md-block"  src="assets/imagens/virtual-banner.jpg">
+							<div class="row mx-auto">
+								<div class="col-12 py-4 d-md-none d-block text-justify bg-primary text-white">
+									<h5 class="text-center text-warning">CONHEÇA NOSSOS CURSOS</h5>
+	Faça algo diferente, seja único, valorize sua formação, afinal, você não precisa esperar quatro anos para inserir-se no mercado de trabalho, a Faculdade oferece uma formação humanística e com visão global das empresas tendo como objetivo formar profissionais capazes.
+									<a class="btn  btn-warning text-white btn-block mx-auto my-4">
+										Confira
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+
+							<div class="row">
+								<div class="col-md-6 my-2">
+									<img class="w-100" src="assets/imagens/camisetas.png">
+								</div>
+								<div class="col-md-6 my-2">
+									<img class="w-100" src="assets/imagens/fotos.png">
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-6 my-3">
+									<a href="https://www.facebook.com/oficialcepbrazopolis/photos/?tab=album&album_id=1204772692878299" target="_blank"><img class="w-100" src="assets/imagens/logos.png"></a>
+								</div>
+								<div class="col-md-6 my-3">
+									<img class="w-100" src="assets/imagens/manuais.png">
+								</div>	
+							</div>
+						</div>		
+
+					</div>
+	
 				</div>
 
 
@@ -171,6 +241,51 @@
 
 		<!-- Fim do conteudo-->
 
-</div>
+	</div>
+
+	<!-- Rodapé -->
+	<div class="conteiner-fluid">
+
+		<div class="row no-gutters w-100">
+			<div class="col-12">
+				<div class="row no-gutters text-center text-white bg-dark p-1">
+					
+				</div>
+
+				<footer>
+					<div class="container-fluid">
+						<div class="row mb-3">
+							<div class="col-sm-12 col-md-4">
+								<p><br/>
+									<h5>Contato</h5>
+									Endereço: 
+									Praça Nossa Senhora Aparecida nº 70, <br/>
+									Brazópolis - MG <br/>
+									Tel.: (35) 3641-1073 <br/>
+									E-mail: escola.54488@educacao.mg.gov.br<br/>
+															
+							</div>
+							<div class="col-sm-12 col-md-3">
+								<p><br/>
+									<h5>Ajuda</h5>
+									<a href="#faq" class="text-white"><i class="fas fa-question-circle"></i> FAQ </a><br/>
+									<a href="#Manuais" class="text-white"><i class="fas fa-book-open"></i> Manuais<br/></a>
+									<a href="#Facebook" class="text-white"><i class="fab fa-facebook"></i> Facebook<br/></a>
+									<a href="#sobre" class="text-white"><i class="fas fa-info-circle"></i> Sobre </a><br/>				
+							</div>
+						</div>
+					</div>
+				</footer>
+
+				<div class="row no-gutters">
+					<div class="col-12 text-center 	m-0 p-0 text-white bg-dark p-1 W-100">
+						<small>&copy; cepbrazopolis.com.br 2018</small>
+					</div>
+				</div>		
+			</div>
+
+		</div>
+	</div>
+	<!-- fim  do Rodaopé -->
 </body>
 </html>
